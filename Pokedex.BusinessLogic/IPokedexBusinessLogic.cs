@@ -1,13 +1,13 @@
-﻿using Pokedox.Pokemons.Models;
+﻿using Pokedex.Pokemons.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokedox.BusinessLogic
+namespace Pokedex.BusinessLogic
 {
-    public interface IPokedoxBusinessLogic
+    public interface IPokedexBusinessLogic
     {
         /// <summary>
         /// Gets a pokemon by providing its name

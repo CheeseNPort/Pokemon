@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokedox.Translations
+namespace Pokedex.Translations
 {
     public interface ITranslate
     {

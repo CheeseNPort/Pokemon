@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pokedox.Pokemons\Pokedox.Pokemons.csproj" />
-    <ProjectReference Include="..\Pokedox.Translations\Pokedox.Translations.csproj" />
+    <ProjectReference Include="..\Pokedex.Pokemons\Pokedex.Pokemons.csproj" />
+    <ProjectReference Include="..\Pokedex.Translations\Pokedex.Translations.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Pokedox.Api": {
+    "Pokedex.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
@@ -22,7 +22,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "pokedoxapi",
+      "launchUrl": "Pokedexapi",
       "environmentVariables": { 
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -30,7 +30,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/pokedoxapi",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/Pokedexapi",
       "publishAllPorts": true
     }
   }

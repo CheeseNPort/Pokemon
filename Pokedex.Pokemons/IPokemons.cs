@@ -1,11 +1,11 @@
-﻿using Pokedox.Pokemons.Models;
+﻿using Pokedex.Pokemons.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokedox.Pokemons
+namespace Pokedex.Pokemons
 {
     public interface IPokemons
     {

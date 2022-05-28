@@ -1,15 +1,15 @@
-﻿using Pokedox.Pokemons;
-using Pokedox.Pokemons.Models;
-using Pokedox.Translations;
+﻿using Pokedex.Pokemons;
+using Pokedex.Pokemons.Models;
+using Pokedex.Translations;
 
-namespace Pokedox.BusinessLogic
+namespace Pokedex.BusinessLogic
 {
-    public class PokedoxBusinessLogic : IPokedoxBusinessLogic
+    public class PokedexBusinessLogic : IPokedexBusinessLogic
     {
         private readonly IPokemons _pokemons;
         private readonly ITranslate _translate;
 
-        public PokedoxBusinessLogic(IPokemons pokemons, ITranslate translate)
+        public PokedexBusinessLogic(IPokemons pokemons, ITranslate translate)
         {
             _pokemons = pokemons;
             _translate = translate;
