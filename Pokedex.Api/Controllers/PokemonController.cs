@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Pokedex.Api.Helpers;
 using Pokedex.BusinessLogic;
+using Pokedex.Pokemons.Exceptions;
 using Pokedex.Pokemons.Models;
 
 namespace Pokedex.Api.Controllers
@@ -29,12 +30,24 @@ namespace Pokedex.Api.Controllers
         [HttpGet("{name}")]
         public async Task<Pokemon> GetPokemon(string name)
         {
-            var pokemon = await _cache.GetOrCreateAsync(CacheHelpers.GetPokemonKey(name), cacheEntry =>
-                {
-                    cacheEntry.SlidingExpiration = TimeSpan.FromMinutes(5);
-                    return _pokemonBusinessLogic.GetPokemon(name);
-                });
-            return pokemon;
+            try
+            {
+                var pokemon = await _cache.GetOrCreateAsync(CacheHelpers.GetPokemonKey(name), cacheEntry =>
+                                {
+                                    cacheEntry.SlidingExpiration = TimeSpan.FromMinutes(5);
+                                    return _pokemonBusinessLogic.GetPokemon(name);
+                                });
+                return pokemon;
+            }
+            catch (PokemonNotFoundException)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            catch(Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokedex.Pokemons.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,21 @@ namespace Pokedex.Pokemons.PokeApi
         private async Task<JsonDocument> Get(string url) 
         {
             var response = await _httpClient.GetAsync(url);
-            response.EnsureSuccessStatusCode();
+
+            // Check if the call was succesful
+            if(!response.IsSuccessStatusCode)
+            {
+                if(response.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    throw new PokemonNotFoundException();
+                }
+                else
+                {
+                    throw new Exception($"Pokemon resource not found with status code {response.StatusCode}");
+                }
+            }
+
+            // Read the response and return
             var body = await response.Content.ReadAsStringAsync();
             var json = JsonDocument.Parse(body);
             return json;
