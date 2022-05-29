@@ -8,13 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ValidPokemonJsonResponse.json" />
-    <None Remove="ValidSpeciesJsonResponse.json" />
+    <None Remove="ValidTranslationResponse.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="ValidSpeciesJsonResponse.json" />
-    <EmbeddedResource Include="ValidPokemonJsonResponse.json" />
+    <EmbeddedResource Include="ValidTranslationResponse.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pokedex.Pokemons.PokeApi\Pokedex.Pokemons.PokeApi.csproj" />
+    <ProjectReference Include="..\Pokedex.Translations.FunTranslationsApi\Pokedex.Translations.FunTranslationsApi.csproj" />
     <ProjectReference Include="..\Pokedex.UnitTestHelpers\Pokedex.UnitTestHelpers.csproj" />
   </ItemGroup>
 

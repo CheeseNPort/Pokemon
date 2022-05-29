@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
-namespace Pokedex.Pokemons.PokeApi.Tests.Helpers
+namespace Pokedex.UnitTestHelpers
 {
-    public static class PokemonsApiTestsHelpers
+    public static class PokedexUnitTestHelpers
     {
         /// <summary>
         /// Reads the contents of an embedded resource file
         /// </summary>
+        /// <typeparam name="T">A type from the assembly containing the resource</typeparam>
         /// <param name="resourceName">The name of the resource to read</param>
         /// <returns>The contents of the embedded resource</returns>
-        public static async Task<string> ReadEmbeddedResourceAsString(string resourceName)
+        /// 
+        public static async Task<string> ReadEmbeddedResourceAsString<T>(string resourceName)
         {
-            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = Assembly.GetAssembly(typeof(T));
             using (var stream = assembly.GetManifestResourceStream(resourceName))
             using (var reader = new StreamReader(stream))
             {

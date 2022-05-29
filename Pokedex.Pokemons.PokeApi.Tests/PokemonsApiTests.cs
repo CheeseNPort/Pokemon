@@ -1,5 +1,5 @@
 using Moq;
-using Pokedex.Pokemons.PokeApi.Tests.Helpers;
+using Pokedex.UnitTestHelpers;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
@@ -15,9 +15,9 @@ namespace Pokedex.Pokemons.PokeApi.Tests
             // Arrange
             var pokemonName = "pokemon1";
             var speciesName = "species1";
-            var pokemonResponse = await PokemonsApiTestsHelpers.ReadEmbeddedResourceAsString("Pokedex.Pokemons.PokeApi.Tests.ValidPokemonJsonResponse.json");
+            var pokemonResponse = await PokedexUnitTestHelpers.ReadEmbeddedResourceAsString<PokeApiTests>("Pokedex.Pokemons.PokeApi.Tests.ValidPokemonJsonResponse.json");
             var pokemonJson = JsonDocument.Parse(pokemonResponse);
-            var speciesResponse = await PokemonsApiTestsHelpers.ReadEmbeddedResourceAsString("Pokedex.Pokemons.PokeApi.Tests.ValidSpeciesJsonResponse.json");
+            var speciesResponse = await PokedexUnitTestHelpers.ReadEmbeddedResourceAsString<PokeApiTests>("Pokedex.Pokemons.PokeApi.Tests.ValidSpeciesJsonResponse.json");
             var speciesJson = JsonDocument.Parse(speciesResponse);
             var pokeApiCalls = new Mock<IPokeApiCalls>();
             pokeApiCalls.Setup(x => x.GetPokemon(It.Is<string>(s => s == pokemonName))).ReturnsAsync(pokemonJson);

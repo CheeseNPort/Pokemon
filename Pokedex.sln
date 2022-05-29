@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.BusinessLogic.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Pokemons.PokeApi.Tests", "Pokedex.Pokemons.PokeApi.Tests\Pokedex.Pokemons.PokeApi.Tests.csproj", "{D7932B88-FA98-4BA9-B6D0-3545060A194C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Translations.FunTranslationsApi.Tests", "Pokedex.Translations.FunTranslationsApi.Tests\Pokedex.Translations.FunTranslationsApi.Tests.csproj", "{A6CA517D-B2FD-4ED3-821D-44613B32A9CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.UnitTestHelpers", "Pokedex.UnitTestHelpers\Pokedex.UnitTestHelpers.csproj", "{F384E5F3-CAF1-4D47-9EA1-1868A68CFEB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CA517D-B2FD-4ED3-821D-44613B32A9CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CA517D-B2FD-4ED3-821D-44613B32A9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CA517D-B2FD-4ED3-821D-44613B32A9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CA517D-B2FD-4ED3-821D-44613B32A9CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F384E5F3-CAF1-4D47-9EA1-1868A68CFEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F384E5F3-CAF1-4D47-9EA1-1868A68CFEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F384E5F3-CAF1-4D47-9EA1-1868A68CFEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F384E5F3-CAF1-4D47-9EA1-1868A68CFEB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
