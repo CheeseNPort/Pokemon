@@ -7,6 +7,9 @@ using Pokedex.Translations.FunTranslationsApi;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
+// Inject the cache
+builder.Services.AddMemoryCache();
+
 // Inject the poke API
 builder.Services.AddHttpClient<IPokeApiCalls, PokeApiCalls>(client => client.BaseAddress = new Uri("https://pokeapi.co/api/v2/"));
 builder.Services.AddTransient<IPokemons>(x => new PokeApi(x.GetRequiredService<IPokeApiCalls>()));

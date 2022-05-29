@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using Pokedex.Api.Helpers;
 using Pokedex.BusinessLogic;
 using Pokedex.Pokemons.Models;
 
@@ -10,10 +12,12 @@ namespace Pokedex.Api.Controllers
     public class PokemonController : ControllerBase
     {
         private readonly IPokedexBusinessLogic _pokemonBusinessLogic;
+        private readonly IMemoryCache _cache;
 
-        public PokemonController(IPokedexBusinessLogic pokemonBusinessLogic)
+        public PokemonController(IPokedexBusinessLogic pokemonBusinessLogic, IMemoryCache cache)
         {
             _pokemonBusinessLogic = pokemonBusinessLogic;
+            _cache = cache;
         }
 
         /// <summary>
@@ -25,7 +29,11 @@ namespace Pokedex.Api.Controllers
         [HttpGet("{name}")]
         public async Task<Pokemon> GetPokemon(string name)
         {
-            var pokemon = await _pokemonBusinessLogic.GetPokemon(name);
+            var pokemon = await _cache.GetOrCreateAsync(CacheHelpers.GetPokemonKey(name), cacheEntry =>
+                {
+                    cacheEntry.SlidingExpiration = TimeSpan.FromMinutes(5);
+                    return _pokemonBusinessLogic.GetPokemon(name);
+                });
             return pokemon;
         }
 
@@ -37,7 +45,11 @@ namespace Pokedex.Api.Controllers
         [HttpGet("translated/{name}")]
         public async Task<Pokemon> GetPokemonTranslated(string name)
         {
-            var pokemon = await _pokemonBusinessLogic.GetPokemonTranslated(name);
+            var pokemon = await _cache.GetOrCreateAsync(CacheHelpers.GetPokemonKey(name), cacheEntry =>
+            {
+                cacheEntry.SlidingExpiration = TimeSpan.FromMinutes(5);
+                return _pokemonBusinessLogic.GetPokemonTranslated(name);
+            });
             return pokemon;
         }
     }
