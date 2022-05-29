@@ -13,9 +13,10 @@
 ```dotnet run --urls=http://localhost:5000```
 
 ## Running the application as a docker container
-1. Install dockerm which can be found at https://docs.docker.com/get-docker/
-2. In a comand prompt, navigate to the root of this project
-3. Run the following commands
+1. Install Asp.Net CORE 6 SDK, which can be found at https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+2. Install docker which can be found at https://docs.docker.com/get-docker/
+3. In a comand prompt, navigate to the root of this project
+4. Run the following commands
 ```docker build -f Pokedex.Api/Dockerfile -t pokedex .```
 ```docker run -it --rm -p 5000:80 --name pokemon pokedex```
 
