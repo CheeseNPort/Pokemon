@@ -5,17 +5,19 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.Api", "Pokedex.Api\Pokedex.Api.csproj", "{996220CF-E8BE-47D4-8723-C3EDC8BC9197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Translations", "Pokedex.Translations\Pokedex.Translations.csproj", "{8B234603-E290-4FF8-AE20-D665B60B5AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.Translations", "Pokedex.Translations\Pokedex.Translations.csproj", "{8B234603-E290-4FF8-AE20-D665B60B5AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Translations.FunTranslationsApi", "Pokedex.Translations.FunTranslationsApi\Pokedex.Translations.FunTranslationsApi.csproj", "{630860E5-E793-4969-9F49-88FBDFF196AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.Translations.FunTranslationsApi", "Pokedex.Translations.FunTranslationsApi\Pokedex.Translations.FunTranslationsApi.csproj", "{630860E5-E793-4969-9F49-88FBDFF196AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Pokemons", "Pokedex.Pokemons\Pokedex.Pokemons.csproj", "{60CD9110-1099-40F6-9937-2403E2BB6C3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.Pokemons", "Pokedex.Pokemons\Pokedex.Pokemons.csproj", "{60CD9110-1099-40F6-9937-2403E2BB6C3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Pokemons.PokeApi", "Pokedex.Pokemons.PokeApi\Pokedex.Pokemons.PokeApi.csproj", "{59E05C22-4564-47A6-9466-2D02CC95D62D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.Pokemons.PokeApi", "Pokedex.Pokemons.PokeApi\Pokedex.Pokemons.PokeApi.csproj", "{59E05C22-4564-47A6-9466-2D02CC95D62D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.BusinessLogic", "Pokedex.BusinessLogic\Pokedex.BusinessLogic.csproj", "{0F7B1AA7-1D25-4F13-9F97-91A62156F0B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.BusinessLogic", "Pokedex.BusinessLogic\Pokedex.BusinessLogic.csproj", "{0F7B1AA7-1D25-4F13-9F97-91A62156F0B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.BusinessLogic.Tests", "Pokedex.BusinessLogic.Tests\Pokedex.BusinessLogic.Tests.csproj", "{2BE8BE4E-2559-4FBC-A280-43DB8345FE5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.BusinessLogic.Tests", "Pokedex.BusinessLogic.Tests\Pokedex.BusinessLogic.Tests.csproj", "{2BE8BE4E-2559-4FBC-A280-43DB8345FE5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Pokemons.PokeApi.Tests", "Pokedex.Pokemons.PokeApi.Tests\Pokedex.Pokemons.PokeApi.Tests.csproj", "{D7932B88-FA98-4BA9-B6D0-3545060A194C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2BE8BE4E-2559-4FBC-A280-43DB8345FE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BE8BE4E-2559-4FBC-A280-43DB8345FE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BE8BE4E-2559-4FBC-A280-43DB8345FE5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7932B88-FA98-4BA9-B6D0-3545060A194C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,21 @@
+﻿{
+  "name": "species1",
+  "is_legendary": true,
+  "habitat": {
+    "name": "habitat1"
+  },
+  "flavor_text_entries": [
+    {
+      "flavor_text": "",
+      "language": {
+        "name": "fr"
+      }
+    },
+    {
+      "flavor_text": "description1",
+      "language": {
+        "name": "en"
+      }
+    }
+  ]
+}
