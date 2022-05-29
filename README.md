@@ -17,4 +17,9 @@
 2. In a comand prompt, navigate to the root of this project
 3. Run the following commands
 ```docker build -f Pokedex.Api/Dockerfile -t pokedex .```
-```docker run -it --rm -p 5000:80 --name pokemon```
+```docker run -it --rm -p 5000:80 --name pokemon pokedex```
+
+## Things I would do differently in production
+1. Configurations items such as API URL's etc would be part of a config file or interface
+2. Cache would be made more generic so more than just in memory could be used e.g. redis
+3. Cache would be improved so the translations could be cached individually, for when the pokemon is part of a species already translated
